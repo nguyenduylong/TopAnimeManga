@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AnimeMangaCollection</string>
+    <string name="title_anime">Top Anime Collection</string>
+    <string name="title_manga">Top Manga Colletion</string>
+    <string name="menu_anime">Anime</string>
+    <string name="menu_manga">Manga</string>
+</resources>
