@@ -4,4 +4,26 @@
     <string name="title_manga">Top Manga Colletion</string>
     <string name="menu_anime">Anime</string>
     <string name="menu_manga">Manga</string>
+    <string name="anime_filter_default">Popularity</string>
+
+    <string-array name="anime_categories">
+        <item>Popularity</item>
+        <item>Favorite</item>
+        <item>Airing</item>
+        <item>Upcoming</item>
+        <item>TV</item>
+        <item>Movie</item>
+        <item>Ova</item>
+        <item>Special</item>
+    </string-array>
+    <string-array name="manga_categories">
+        <item>Popularity</item>
+        <item>Favorite</item>
+        <item>Manga</item>
+        <item>Novels</item>
+        <item>Oneshots</item>
+        <item>Doujin</item>
+        <item>Manhwa</item>
+        <item>Manhua</item>
+    </string-array>
 </resources>

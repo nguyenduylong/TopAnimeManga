@@ -4,7 +4,7 @@
     android:id="@+id/container"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:paddingTop="5dp"
+    android:paddingTop="0dp"
     android:background="#262626">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

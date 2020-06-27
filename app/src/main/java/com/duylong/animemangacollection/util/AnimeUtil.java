@@ -1,24 +1,14 @@
 package com.duylong.animemangacollection.util;
 
-import android.content.Context;
-import android.util.Log;
-import android.widget.Toast;
-
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.duylong.animemangacollection.constant.APIEndpoint;
 import com.duylong.animemangacollection.model.Anime;
 import com.duylong.animemangacollection.model.Manga;
+import com.exblr.dropdownmenu.DropdownListItem;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AnimeUtil {
 
@@ -78,5 +68,13 @@ public class AnimeUtil {
         }
 
         return mangaObject;
+    }
+
+    public static final List<DropdownListItem> convertArrayToListDropdownItem(String[] categories) {
+        ArrayList<DropdownListItem> categoryList = new ArrayList<DropdownListItem>();
+        for (int i = 0; i < categories.length; i++) {
+            categoryList.add(new DropdownListItem(i + 1, categories[i]));
+        }
+        return categoryList;
     }
 }

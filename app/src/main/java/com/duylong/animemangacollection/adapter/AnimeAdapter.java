@@ -5,19 +5,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.duylong.animemangacollection.R;
 import com.duylong.animemangacollection.model.Anime;
-import com.google.android.material.card.MaterialCardView;
+import com.exblr.dropdownmenu.DropdownListItem;
 import com.google.android.material.imageview.ShapeableImageView;
 
 import java.util.ArrayList;
 
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class AnimeAdapter extends BaseAdapter {
 
@@ -48,15 +45,30 @@ public class AnimeAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        Anime item = this.animeList.get(i);
+        AnimeHolder holder;
         View layout  = this.layoutInflater.inflate(R.layout.anime_item, viewGroup, false);
-        ShapeableImageView animeImage = (ShapeableImageView) layout.findViewById(R.id.anime_image);
-        TextView animeTitle = (TextView) layout.findViewById(R.id.anime_title);
-        TextView startDate = (TextView) layout.findViewById(R.id.start_date);
-        animeTitle.setText(item.getShortTitle());
-        startDate.setText(item.getStartDate());
-        Glide.with(this.context).load(item.getImageUrl()).into(animeImage);
 
+        holder = new AnimeHolder(layout);
+        layout.setTag(holder);
+        holder.bind(i);
         return layout;
+    }
+
+    private class AnimeHolder{
+        private ShapeableImageView animeImage;
+        private TextView animeTitle;
+        private TextView startDate;
+        public AnimeHolder(View view) {
+            animeImage = (ShapeableImageView) view.findViewById(R.id.anime_image);
+            animeTitle = (TextView) view.findViewById(R.id.anime_title);
+            startDate = (TextView) view.findViewById(R.id.start_date);
+        }
+
+        public void bind(int position) {
+            Anime item = animeList.get(position);
+            animeTitle.setText(item.getShortTitle());
+            startDate.setText(item.getStartDate());
+            Glide.with(context).load(item.getImageUrl()).into(animeImage);
+        }
     }
 }

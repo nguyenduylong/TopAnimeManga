@@ -6,4 +6,6 @@
     <color name="white_87">#ddffffff</color>
     <color name="white">#ffffffff</color>
     <color name="background800">#424242</color>
+    <item name="filter_default" type="color">#827f93</item>
+    <color name="textDefault">#555555</color>
 </resources>

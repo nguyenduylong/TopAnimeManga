@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
 import com.duylong.animemangacollection.R;
 import com.duylong.animemangacollection.model.Manga;
@@ -43,15 +45,34 @@ public class MangaAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        Manga item = this.mangaList.get(i);
+        MangaHolder viewHolder;
         View layout  = this.layoutInflater.inflate(R.layout.anime_item, viewGroup, false);
-        ShapeableImageView animeImage = (ShapeableImageView) layout.findViewById(R.id.anime_image);
-        TextView animeTitle = (TextView) layout.findViewById(R.id.anime_title);
-        TextView startDate = (TextView) layout.findViewById(R.id.start_date);
-        animeTitle.setText(item.getShortTitle());
-        startDate.setText(item.getStartDate());
-        Glide.with(this.context).load(item.getImageUrl()).into(animeImage);
+
+        viewHolder = new MangaHolder(layout);
+        layout.setTag(viewHolder);
+        viewHolder.bind(i);
 
         return layout;
+    }
+
+    private class MangaHolder{
+        private ShapeableImageView mangaImage;
+        private TextView mangaTitle;
+        private TextView startDate;
+
+        public MangaHolder(View view) {
+            mangaImage = (ShapeableImageView) view.findViewById(R.id.anime_image);
+            mangaTitle = (TextView) view.findViewById(R.id.anime_title);
+            startDate = (TextView) view.findViewById(R.id.start_date);
+        }
+
+        public void bind(int position) {
+            Manga item = mangaList.get(position);
+
+            mangaTitle.setText(item.getShortTitle());
+            startDate.setText(item.getStartDate());
+            Glide.with(context).load(item.getImageUrl()).into(mangaImage);
+
+        }
     }
 }
