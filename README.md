@@ -1,6 +1,6 @@
 # TopAnimeManga Application
 ## Purpose : 
-I created this application for practicing Android Listview, Gridview and API Request, Response Handling
+I created this application for practicing Android Listview, Gridview and API Request, Response Handling, Fragment
 ## Using Libraries:
 Some libraries which I used in this application:
 
