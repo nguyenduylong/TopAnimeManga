@@ -2,7 +2,7 @@
 <com.skydoves.transformationlayout.TransformationLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/item_poster_circle_transformationLayout"
+    android:id="@+id/transformation_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 

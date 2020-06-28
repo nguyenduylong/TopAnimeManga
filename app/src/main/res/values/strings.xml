@@ -5,6 +5,8 @@
     <string name="menu_anime">Anime</string>
     <string name="menu_manga">Manga</string>
     <string name="anime_filter_default">Popularity</string>
+    <string name="anime_detail">Anime Detail</string>
+    <string name="manga_detail">Manga Detail</string>
 
     <string-array name="anime_categories">
         <item>Popularity</item>

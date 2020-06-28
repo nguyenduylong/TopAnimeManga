@@ -23,7 +23,7 @@ import com.duylong.animemangacollection.adapter.CategoryFilterAdapter;
 import com.duylong.animemangacollection.adapter.MangaAdapter;
 import com.duylong.animemangacollection.constant.APIEndpoint;
 import com.duylong.animemangacollection.model.Manga;
-import com.duylong.animemangacollection.util.AnimeUtil;
+import com.duylong.animemangacollection.util.Util;
 import com.exblr.dropdownmenu.DropdownListItem;
 import com.exblr.dropdownmenu.DropdownMenu;
 
@@ -60,7 +60,7 @@ public class MangaFragment extends Fragment {
 
         mangaCategories = getResources().getStringArray(R.array.manga_categories);
 
-        ArrayList<DropdownListItem> categoryList = (ArrayList<DropdownListItem>) AnimeUtil.convertArrayToListDropdownItem(mangaCategories);
+        ArrayList<DropdownListItem> categoryList = (ArrayList<DropdownListItem>) Util.convertArrayToListDropdownItem(mangaCategories);
         categoryFilterAdapter = new CategoryFilterAdapter(getContext(), categoryList);
 
         dropdownMenu = (DropdownMenu) root.findViewById(R.id.category_filter);
@@ -108,7 +108,7 @@ public class MangaFragment extends Fragment {
                             mangaArrayList = new ArrayList<Manga>();
                             for (int i = 0; i < topContents.length(); i++) {
                                 JSONObject mangaItem = topContents.getJSONObject(i);
-                                Manga mangaObject = AnimeUtil.convertJsonToMangaObject(mangaItem);
+                                Manga mangaObject = Util.convertJsonToMangaObject(mangaItem);
                                 mangaArrayList.add(mangaObject);
                             }
                            MangaAdapter animeAdapter = new MangaAdapter(getContext(), mangaArrayList);

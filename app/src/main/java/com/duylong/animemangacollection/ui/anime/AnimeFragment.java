@@ -23,7 +23,7 @@ import com.duylong.animemangacollection.adapter.AnimeAdapter;
 import com.duylong.animemangacollection.adapter.CategoryFilterAdapter;
 import com.duylong.animemangacollection.constant.APIEndpoint;
 import com.duylong.animemangacollection.model.Anime;
-import com.duylong.animemangacollection.util.AnimeUtil;
+import com.duylong.animemangacollection.util.Util;
 import com.exblr.dropdownmenu.DropdownListItem;
 import com.exblr.dropdownmenu.DropdownMenu;
 
@@ -52,7 +52,6 @@ public class AnimeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-
         View root = inflater.inflate(R.layout.fragment_anime, container, false);
 
         animeGridView = root.findViewById(R.id.anime_list);
@@ -62,7 +61,7 @@ public class AnimeFragment extends Fragment {
 
 
         filterCategories = getResources().getStringArray(R.array.anime_categories);
-        ArrayList<DropdownListItem> categoryList = (ArrayList<DropdownListItem>) AnimeUtil.convertArrayToListDropdownItem(filterCategories);
+        ArrayList<DropdownListItem> categoryList = (ArrayList<DropdownListItem>) Util.convertArrayToListDropdownItem(filterCategories);
         categoryFilterAdapter = new CategoryFilterAdapter(getContext(), categoryList);
 
         dropdownMenu = (DropdownMenu) root.findViewById(R.id.category_filter);
@@ -112,7 +111,7 @@ public class AnimeFragment extends Fragment {
                             animeList = new ArrayList<Anime>();
                             for (int i = 0; i < topContents.length(); i++) {
                                 JSONObject animeItem = topContents.getJSONObject(i);
-                                Anime animeObject = AnimeUtil.convertJsonToAnimeObject(animeItem);
+                                Anime animeObject = Util.convertJsonToAnimeObject(animeItem);
                                 animeList.add(animeObject);
                             }
                             Log.i("first anime", animeList.get(0).getTitle());

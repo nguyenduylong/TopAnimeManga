@@ -41,4 +41,5 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     compile 'com.android.support:cardview-v7:21.0.+'
     compile 'com.exblr:dropdown-menu:1.0.2'
+    implementation 'com.github.shallcheek:RatingBar:v1.0'
 }

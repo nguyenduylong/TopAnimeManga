@@ -1,18 +1,20 @@
 package com.duylong.animemangacollection.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
+import com.duylong.animemangacollection.DetailActivity;
 import com.duylong.animemangacollection.R;
 import com.duylong.animemangacollection.model.Manga;
 import com.google.android.material.imageview.ShapeableImageView;
+import com.skydoves.transformationlayout.TransformationCompat;
+import com.skydoves.transformationlayout.TransformationLayout;
 
 import java.util.ArrayList;
 
@@ -47,10 +49,20 @@ public class MangaAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         MangaHolder viewHolder;
         View layout  = this.layoutInflater.inflate(R.layout.anime_item, viewGroup, false);
-
+        final TransformationLayout transformationLayout = layout.findViewById(R.id.transformation_layout);
         viewHolder = new MangaHolder(layout);
         layout.setTag(viewHolder);
         viewHolder.bind(i);
+
+        final Manga item = this.mangaList.get(i);
+        layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DetailActivity.class);
+                intent.putExtra("detailItem", item);
+                TransformationCompat.INSTANCE.startActivity(transformationLayout, intent);
+            }
+        });
 
         return layout;
     }

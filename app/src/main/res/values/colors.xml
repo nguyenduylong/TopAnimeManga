@@ -8,4 +8,5 @@
     <color name="background800">#424242</color>
     <item name="filter_default" type="color">#827f93</item>
     <color name="textDefault">#555555</color>
+    <color name="background">#2B292B</color>
 </resources>
