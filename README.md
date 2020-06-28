@@ -7,6 +7,7 @@ Some libraries which I used in this application:
 1. <a href="https://developer.android.com/training/volley">Volley</a> : An HTTP library that makes networking for Android apps easier and most importantly, faster
 2. <a href="https://github.com/skydoves/TransformationLayout">TransformationLayout</a> : A library that makes transforms into a different view or activity using morphing animations.
 3. <a href="https://github.com/bumptech/glide">Glide</a> : A fast and efficient open source media management and image loading framework for Android that wraps media decoding, memory and disk caching, and resource pooling into a simple and easy to use interface
+4. <a href="https://jikan.docs.apiary.io/#reference/0/top">Jikan API</a> : An Unofficial MyAnimeList API. It scrapes the website to satisfy the need for an API - which MyAnimeList lacks.
 
 ## Functionalities:
 Some functionalities that I developed in this app:
