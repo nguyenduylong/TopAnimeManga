@@ -40,4 +40,5 @@ Manga Detail           |   Detail Infomations
 ![](./demo_img/manga_detail.png) | ![](./demo_img/manga_detail_2.png)
 
 ## Video demo: 
-<iframe width="1280" height="720" src="https://www.youtube.com/watch?v=nWRN_g7drvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![](./demo_img/anime_fragment.png)](https://www.youtube.com/watch?v=nWRN_g7drvY "Demo video")
+vid
