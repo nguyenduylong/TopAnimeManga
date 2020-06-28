@@ -40,5 +40,4 @@ Manga Detail           |   Detail Infomations
 ![](./demo_img/manga_detail.png) | ![](./demo_img/manga_detail_2.png)
 
 ## Video demo: 
-[![](./demo_img/anime_fragment.png)](https://www.youtube.com/watch?v=nWRN_g7drvY "Demo video")
-vid
+<a href="https://www.youtube.com/watch?v=nWRN_g7drvY&t=1s">Demo</a>
