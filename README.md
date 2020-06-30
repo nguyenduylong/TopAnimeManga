@@ -1,6 +1,9 @@
 # TopAnimeManga Application
 ## Purpose : 
 I created this application for practicing Android Listview, Gridview and API Request, Response Handling, Fragment
+
+## Ideal : 
+You can search the most popular animes and mangas and have some information about the anime, manga that you want to view
 ## Using Libraries:
 Some libraries which I used in this application:
 
